@@ -17,6 +17,10 @@ body::-webkit-scrollbar {
     display: none;
 }*/
 
+a{
+    color: #280147;
+}
+
 input{
     height: 30px;
     border-radius: 5px;

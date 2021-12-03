@@ -265,7 +265,7 @@ form label{
 }
 
 .cuerpo_form>div.div_2>label{
-    margin-top: 1%;
+    margin-top: 3%;
 }
 
 .p_contraseña{
@@ -295,7 +295,7 @@ form label{
 }
 
 a.btn_crear{
-    margin-top: 2%;
+    margin-top: 6%;
 }
 
 @media only screen and (max-width: 600px){
