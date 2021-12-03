@@ -158,3 +158,18 @@
     0%{background-position:0px;}
     100%{background-position: -5000px;}
 }
+
+.div_dos_fechas{
+    display: flex;
+    margin-bottom: 2%;
+}
+
+.div_dos_fechas>input{
+   margin: auto;
+   width: 45%;
+}
+
+.div_dos_fechas>p{
+    font-size: 30px;
+    margin: auto 4% ;
+}
