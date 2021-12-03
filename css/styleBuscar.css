@@ -1,0 +1,160 @@
+.cont_general{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+.cont_busqueda, .cont_result_busqueda{
+    border-radius: 10px;
+    background-color: white;
+}
+
+.cont_busqueda{
+    margin: 3%;
+}
+.cont_result_busqueda{
+    margin: 1.5%;
+    margin-left: 0;
+}
+
+.cont_titulo_busqueda{
+    text-align: center;
+    color: white;
+    background-color: #1e0036;
+    padding: 2%;
+}
+
+.titulo_tipo_busqueda{
+    display: flex;
+    width: 100%;
+    height: 5%;
+    text-align: center;
+}
+
+.titulo_tipo_busqueda>button{
+    padding-top: 1%;
+    width: 50%;
+    height: 100%;
+    border: none;
+    color: white;
+}
+
+.btn_en_uso{
+    background-color: #500091;
+}
+
+.btn_en_desuso{
+    background-color: #493857;
+}
+
+.titulo_tipo_busqueda>button:hover{
+    background-color: #2f0055;
+}
+
+.form_busqueda_usuarios{
+    background-color: #500091;
+    color: white;
+    padding: 5%;
+    height: 89%;
+}
+
+.form_busqueda_usuarios>input{
+    width: 100%;
+    margin-bottom: 4%;
+}
+
+.form_busqueda_usuarios>input[type="button"]{
+    background-color: green;
+    color: white;
+}
+
+/*RESULTADOS DE LA BÚSQUEDA*/
+.ocultar_resultados{
+    height: 36px;
+}
+.cont_result_busqueda>p{
+    background-color: #1e0036;
+    color: white;
+    text-align: center;
+    padding: 1%;
+}
+
+.cont_usuarios_resultdo_busqueda{
+    width: 100%;
+    height: 90%;
+    padding: 2% 1%;
+    margin-top: 1%;
+}
+
+/*TARGETA Usuarios*/
+
+.cont_grupo_targetas{
+    width: 100%;
+    display: flex;
+    margin-bottom: 2%;
+}
+
+.targeta_contacto{
+    display: flex;
+    padding: 0.5%;
+    border-radius: 10px;
+    background-color: #dcc4f0;
+    width: 30%;
+    margin: auto;
+}
+
+.div_present_contact{
+    text-align: center;
+    padding: 10% 5%;
+    margin-right: 2%;
+    border-radius: 10px;
+    background-color: #f6ebff;
+}
+
+.foto_perfil_busqueda{
+    width: 100px;
+    height: 100px;
+    margin-bottom: 5%;
+}
+
+.cont_datos_busqueda{
+    width: 50%;
+    font-size: 14px;
+    padding: 5% 0% 0% 2%;
+    border-left: #1e0036 solid 1px;
+}
+
+.cont_datos_busqueda>p{
+    margin-bottom: 10%;
+}
+
+.animar_resultado{
+    animation: resultados 0.3s calc(1) linear;
+}
+
+@keyframes resultados {
+    0%{height: 36px;}
+    100%{height: 90%}
+}
+
+/*CARGA EN ESPERA*/
+.div_espera{
+    text-align: center;
+    font-size: 30px;
+    color: #9b85ad;
+}
+
+.div_espera>div:nth-child(1){
+    margin: 10% auto;
+}
+
+.div_carga_en_espera{
+    width: 500px;
+    height: 50px;
+    background-image: url(../img/espera.png);
+    margin: 2% auto;
+    animation: espera 1s steps(10) infinite  alternate-reverse;
+}
+
+@keyframes espera {
+    0%{background-position:0px;}
+    100%{background-position: -5000px;}
+}

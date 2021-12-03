@@ -1,0 +1,49 @@
+header{
+    background: #280147;
+}
+
+.logo{
+    position: absolute;
+    left: 4.34%;
+    right: 86.63%;
+    top: 0.57%;
+    width: 104px;
+}
+
+nav{
+    height: 90%;
+    text-align: center;
+    padding-top: 1.5%;
+}
+
+nav>div{
+    position: absolute;
+    margin-left: 40%;
+    width: 20%;
+}
+
+nav>div a{
+    text-align: center;
+    font-size: 30px;
+    padding: 2.5%;
+}
+
+nav a{
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    padding: 0.5%;
+    margin: auto 5%;
+}
+
+.pantalla_activa{
+    border-bottom: solid white 4px;
+}
+
+nav a:hover{
+    background-color: rgb(163, 13, 163);
+}
+
+.search{
+    margin-left: 90%;
+}

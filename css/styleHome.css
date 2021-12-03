@@ -1,0 +1,167 @@
+.contenedor_general{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    overflow: hidden;
+}
+
+
+.publicaciones, .cont_destacados, .cont_recomendados{
+    background-color: white;
+    border-radius: 10px;
+}
+
+.cont_dest_rec, .publicaciones, .la_publicidad{
+    height: 77%;
+}
+.cont_dest_rec{
+    margin-top: 5%;
+    margin-left: 5%;
+}
+.publicaciones{
+    margin: 1.8%;
+}
+
+/*COMPONENTE DESTACADO Y RECOMENDADO*/
+
+.cont_destacados, .cont_recomendados{
+    height: 49%;
+    padding: 1%;
+}
+
+.cont_destacados{
+    margin-bottom: 5%;
+}
+
+.div_desc_rec_scroll{
+    height: 90%;
+}
+
+.usuario_destacado{
+    display: grid;
+    grid-template-columns: 0.4fr 1.3fr 0.3fr;
+    height: 60px;
+    width: auto;
+    border-radius: 10px;
+    margin: 2%;
+    padding: 2%;
+}
+
+.usuario_destacado:hover{
+   background-color: #dcc4f0;
+}
+
+.texto_usuario_destacado{
+    padding: 5% 0 0 5%;
+}
+
+.btn_agregar{
+    /*usa propiedadea de la clase btn_ver*/
+    width: 60px;
+}
+
+.p_destacado{
+    font-size: 11px;
+    color: gray;
+}
+
+.p_recomendado{
+    margin-top: 8%;
+}
+
+.titulo_destacado{
+    text-align: center;
+    padding: 2%;
+    border-bottom: solid 1px #280147;
+}
+
+.foto_perfil i{
+    margin-top: 65%;
+    float: right;
+    font-size: 20px;
+    color: rgb(255, 190, 70);
+}
+
+/*PUBLICIDADES*/
+
+.la_publicidad{
+    display: block;
+    margin: 5% 5% 1% 0%;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+
+}
+
+.div_la_publicidad{
+    height: 49%;
+    width: 100%;
+    margin-bottom: 2%;
+    border-bottom: solid 1px rgb(184, 184, 184);
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.div_la_publicidad>img{
+    width: 100%;
+}
+
+.div_la_publicidad>p{
+    text-align: center;
+    font-size: 12px;
+    color: grey;
+}
+
+.div_perfil_publicidad{
+    display: flex;
+    align-items: center;
+    width: 95%;
+    margin: auto;
+    padding: 1%;
+    border-radius: 10px;
+}
+
+.div_perfil_publicidad:hover{
+    background-color: #dcc4f0;
+}
+
+.perfil_mascotas2{
+    margin-right: 2%;
+    background-image: url(../img/pp/p22.jpg);
+}
+
+.perfil_mascota{
+    margin-right: 2%;
+    background-image: url(../img/pp/p6.jpg);
+}
+
+.div_visita_publicidad{
+    text-align: center;
+    font-size: 12px;
+}
+
+.div_visita_publicidad>p{
+    margin-bottom: 2%;
+}
+
+.div_visita_publicidad>p>i{
+    font-size: 12px;
+    margin-right: 1%;
+}
+
+.div_publi_mascotas{
+    padding-top: 3%;
+}
+
+.animarEntradaPublicidad{
+    animation: animarEntradaPublicidad 0.3s calc(1) linear;
+}
+
+@keyframes animarEntradaPublicidad {
+    0%{height: 0%;}
+    100%{height: 100%;}
+}
+
+
+.div_cont_publicidad{
+    overflow: hidden;
+    height: 100%;
+}

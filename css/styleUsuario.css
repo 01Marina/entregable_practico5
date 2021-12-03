@@ -1,0 +1,381 @@
+.contenedor_general{
+ display: grid;
+ grid-template-rows: 0.4fr 1fr;
+ padding-bottom: 1%;
+}
+
+.cont_user{
+    display: grid;
+    grid-template-columns: 0.5fr 2fr;
+}
+
+.header_usuario, .div_contactos, .div_publicaciones{
+    background-color: white;
+    border-radius: 10px;
+}
+
+.cont_publicaciones{
+    height: 600px;
+}
+
+.div_publicaciones{
+    height: 83%;
+}
+
+.div_contactos{
+    height: 600px;
+    margin-right: 1%;
+    margin-left: 5%;
+}
+
+/*ENCABEZADO DE PANTALLA USUARIO*/
+
+.header_usuario{
+    margin: 1%;
+    height: 600px;
+    padding: 1%;
+}
+
+.foto_portada{
+    background-image: url(https://www.xtrafondos.com/wallpapers/paisaje-digital-en-atardecer-5846.jpg);
+    background-size: cover;
+    width: 80%;
+    height: 70%;
+    margin: auto;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.foto_usuario{
+    width: 150px;
+    height: 150px;
+    margin-top: 27%;
+}
+
+.header_usuario>p{
+    text-align: center;
+    margin-top: 3%;
+    font-size: 30px;
+}
+
+.perfil_usuario_detalles{
+    display: flex;
+    align-items: center;
+    width: 60%;
+    margin: 1% auto auto 33%;
+}
+
+.perfil_usuario_detalles>div:nth-child(1){
+    display: flex;
+    width: 50%;
+    padding: 2.5%;
+    margin-left: 6%;
+    border-radius: 10px;
+    background-color: #f5e9ff;
+}
+
+.perfil_usuario_detalles>div:nth-child(1)>p{
+    margin: auto;
+}
+
+.perfil_usuario_detalles>div:nth-child(2){
+    text-align: center;
+    margin: auto auto auto 30%;
+}
+
+.perfil_usuario_detalles>div:nth-child(2)>button{
+    border-radius: 8px;
+    border: none;
+    padding: 5%;
+    margin-bottom: 5%;
+    background-color: #d39eff;
+}
+
+.perfil_usuario_detalles>div:nth-child(2)>button:hover{
+    background-color: #420079;
+    color: white;
+}
+/**/
+
+.input_publicacion{
+    width: 75% !important;
+}
+
+.icono_adjuntar{
+    margin-left: 1%;
+}
+
+.cont_agregar_coment{
+    background-color: #d39eff !important;
+    margin-bottom: 1% !important;
+}
+
+.cont_publicaciones{
+    background-color: white;
+    margin-right: 1.5%;
+    margin-left: 1%;
+    border-radius: 10px;
+}
+
+.div_publicaciones{
+    background-color: white;
+    margin-right: 1.5%;
+    margin-left: 1%;
+    padding: 2% 5% 0% 5%;
+}
+
+
+/*CONTACTOS*/
+
+.div_cont_contac_scroll{
+    height: 80%;
+    padding: 1%;
+}
+
+/*PANTALLA EDITAR PERFIL*/
+
+.cont_editar_perfil{
+    display: flex;
+    justify-content: center;
+
+}
+.div_editar_perfil{
+    position: absolute;
+    z-index: 2;
+    width: 40%;
+    height: 85%;
+    background-color: #420079;
+    margin: 1em auto;
+    border-radius: 10px;
+    padding: 1%;
+    overflow: hidden;
+}
+
+.animarEntradaEditar{
+    animation: animarEntradaEditar 0.3s calc(1) linear;
+}
+
+.animarEntradaEditarReverse{
+    animation: animarEntradaEditarReversa 0.3s calc(1) linear;
+}
+
+@keyframes animarEntradaEditar {
+    0%{height: 0%;}
+    100%{height: 85%;}
+}
+
+@keyframes animarEntradaEditarReversa {
+    0%{height: 85%;}
+    100%{height: 0%;}
+}
+
+.div_editar_perfil>i{
+    font-size: 20px;
+    color: white;
+    margin-left: 98%;
+    margin-bottom: 2%;
+}
+
+.div_editar_perfil>div>div>i{
+    font-size: 16px;
+    margin: 0 0 0 auto;
+    color: gray;
+}
+
+.div_editar_perfil>div>div>i:hover{
+    color: black;
+}
+
+.div_dato{
+    display: flex;
+    width: 100%;
+    height: 35px;
+    align-items: center;
+    background-color: white;
+    margin-bottom: 2%;
+    border-radius: 10px;
+    padding: 1%;
+}
+
+.div_dato>p:nth-child(1){
+    width: 15%;
+    border-right: solid 1px gray;
+    margin-right: 1%;
+    color: grey;
+}
+.div_dato>p:nth-child(2){
+    width: 80%;
+}
+
+.div_dato_foto_usurio{
+    background-color: white;
+    border-radius: 10px;
+    margin: 2% auto;
+    padding: 1%;
+    height: 40%;
+    overflow: hidden;
+}
+
+.div_dato_foto_usurio>.foto_perfil{
+    width: 160px;
+    height: 160px;
+    margin: auto;
+    display: flex;
+    justify-content: end;
+    margin-bottom: 1%;
+}
+.div_dato_foto_usurio>.foto_perfil>i{
+    margin-top: 80%;
+}
+
+.div_dato_foto_usurio>div:nth-child(2){
+    display: flex;
+    width: 40%;
+    text-align: center;
+    margin: auto;
+    align-items: center;
+}
+
+.div_dato_foto_usurio>div:nth-child(2)>p{
+    width: 95%;
+    font-size: 25px;
+}
+
+.fondo_editar_perfil{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.6;
+}
+
+/*PANTALLA CONFIGURACIÓN*/
+.div_configuracion{
+    width: 30%;
+    height: 70%;
+}
+
+.div_configuracion>div.div_dato_foto_usurio{
+    height: 55%;
+    padding-top: 5%;
+}
+
+.div_configuracion>div>div.div_dato{
+    padding: 1% 4%;
+}
+
+.div_configuracion>div>div.div_dato>p{
+    color: black;
+    border-right: none;
+}
+
+.div_configuracion>div>button{
+    background-color: #420079;/*420079*/
+    color: white;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    border: none;
+    margin: auto;
+    margin-top: 5%;
+    padding: 2%;
+}
+
+.div_configuracion>div>button:hover{
+    background-color: white;
+    color: #420079;
+}
+
+.div_configuracion>div>button>p{
+    margin-left: 5px;
+    font-size: 16px;
+}
+
+.animarEntradaConfig{
+    animation: animarEntradaConfig 0.3s calc(1) linear;
+}
+
+.animarEntradaConfigReverse{
+    animation: animarEntradaConfigReversa 0.3s calc(1) linear;
+}
+
+@keyframes animarEntradaConfig {
+    0%{height: 0%;}
+    100%{height: 70%;}
+}
+
+@keyframes animarEntradaConfigReversa {
+    0%{height: 70%;}
+    100%{height: 0%;}
+}
+
+
+.div_adjuntar_en_publicacion{
+    margin: auto;
+    margin-bottom: 1%;
+    width: 80%;
+    display: flex;
+    padding: 1%;
+    background-color: #d39eff;
+    border-radius: 10px;
+}
+
+.div_adjuntar_en_publicacion>div{
+    margin: auto;
+    text-align: center;
+    color: #250044;
+}
+
+.div_adjuntar_en_publicacion>div:hover{
+    color: #5d00a8;
+}
+
+.hiden_2{
+    display: none;
+}
+
+.sub_menu{
+    position: relative;
+    font-size: 20px;
+    margin-top: 0.5%;
+    border-radius: 5px;
+    padding:0.5%;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    margin-left: 0.5%;
+}
+.sub_menu>i{
+    font-size: 20px;
+}
+
+.sub_menu:hover{
+    background-color: #d39eff;
+}
+
+.sub_menu_opciones{
+    position: absolute;
+    background-color: #d39eff;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 10px;
+    justify-content: left;
+    right: 20%;
+}
+
+.sub_menu_opciones>p{
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+}
+.sub_menu_opciones>p:hover{
+    background-color: #8800f8;
+    color: white;
+}
+
+.foto_perfil_max{
+    margin-right: 5%;
+}

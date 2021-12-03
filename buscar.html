@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styleGeneral.css">
+    <link rel="stylesheet" href="css/styleHeader.css">
+    <link rel="stylesheet" href="css/stylePublicaciones.css">
+    <link rel="stylesheet" href="css/styleBuscar.css">
+    <link rel="stylesheet" href="css/styleFotosPerfiles.css">
+    <script src="js/buscar.js" defer></script>
+    <script src="https://kit.fontawesome.com/dae53e07cf.js" crossorigin="anonymous"></script>
+    <title>RedVet buscar</title>
+</head>
+<body>
+    <header>
+        <a href="home.html"><img class="logo" src="img/logo.png" alt="logo RedVet"></a>
+        <nav>
+            <div>
+                <a href="home.html"><i class="fa fa-home"></i></a>
+                <a href="usuario.html"><i class="fa fa-user"></i></a>
+                <a href="mensajes.html"><i class="fa fa-comment-dots"></i></a>
+            </div>
+            <a class="search pantalla_activa" href="buscar.html"><i class="fa fa-search " ></i></a>
+        </nav>
+    </header>
+    <section class="cont_general">
+        <section class="cont_busqueda">
+            <div class="cont_titulo_busqueda">
+                <p>Personaliza tu búsqueda</p>
+            </div>
+            <div class="titulo_tipo_busqueda">
+                <button class="btn_en_uso" id="btn_usuario">Usuarios</button>
+                <button class="btn_en_desuso" id="btn_publicacion">Publicaciones </button>
+            </div>
+            <form class="form_busqueda_usuarios " action="" id="form_usuarios">
+                <label for="usuario">Usuario</label>
+                <input type="text" id="usuario" placeholder="Escribe un usuario">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" placeholder="Escribe un nombre">
+                <label for="apellido">Apellido</label>
+                <input type="text" id="apellido" placeholder="Escribe un apellido">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Escribe un email">
+                <label for="localidad">Localidad</label>
+                <input type="text" id="localidad" placeholder="Escribe una localidad">
+                <label for="ocupacion">Ocupación</label>
+                <input type="text" id="ocupacion" placeholder="Escribe una ocupación">
+                <label for="edad">Edad</label>
+                <input type="number" id="edad" placeholder="Escribe una edad">
+                <input type="button" id="btn_buscar_usuarios" value="Buscar">
+            </form>
+            <form class="form_busqueda_usuarios" action="" id="form_publicaciones">
+                <label for="palabra">Palabra clave</label>
+                <input type="text" id="palabra" placeholder="Escribe una palabra clave">
+                <label for="usuario">Usuario</label>
+                <input type="text" id="usuario" placeholder="Escribe un usuario">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" placeholder="Escribe un nombre">
+                <label for="apellido">Apellido</label>
+                <input type="text" id="apellido" placeholder="Escribe un apellido">
+                <label for="fecha">Fecha</label>
+                <input type="date" id="fecha">
+                <label for="localidad">Localidad</label>
+                <input type="text" id="localidad" placeholder="Escribe una localidad">
+                <label for="ocupacion">Ocupación</label>
+                <input type="text" id="ocupacion" placeholder="Escribe una ocupación">
+                <input type="button" id="btn_buscar_publicacion" value="Buscar">
+            </form>
+        </section>
+        <section class="cont_result_busqueda ocultar_resultados" id="cont_result_busqueda"><!----->
+            <p>Resultados de la búsqueda</p>
+            <div class="cont_usuarios_resultdo_busqueda div_espera hiden" id="div_espera">
+                <div>
+                    <p>Espera un momento</p>
+                    <p>estamos conectando los datos en RedVet</p>
+                </div>
+                <div class="div_carga_en_espera"></div>
+            </div>
+            <div class="cont_usuarios_resultdo_busqueda scroll hiden" id="resutado_usuario">
+               <div class="cont_grupo_targetas">
+                    <div class="targeta_contacto">
+                        <div class="div_present_contact">
+                            <div class="foto_perfil foto_foto_perfil_20 foto_perfil_busqueda"></div>
+                            <p>Maca Nadal</p>
+                        </div>
+                        <div class="cont_datos_busqueda">
+                            <p>Macarena Nadal</p>
+                            <p>Buenos Aires</p>
+                            <p>Adiestradora de mascotas</p>
+                            <p>38 años</p>
+                        </div>
+                    </div>
+                    <div class="targeta_contacto">
+                        <div class="div_present_contact">
+                            <div class="foto_perfil foto_foto_perfil_18 foto_perfil_busqueda"></div>
+                            <p>Lu Calderón</p>
+                        </div>
+                        <div class="cont_datos_busqueda">
+                            <p>Lucia Macarena Calderón</p>
+                            <p>Buenos Aires</p>
+                            <p>Adiestradora</p>
+                        </div>
+                    </div>
+                    <div class="targeta_contacto">
+                        <div class="div_present_contact">
+                            <div class="foto_perfil foto_foto_perfil_19 foto_perfil_busqueda"></div>
+                            <p>Mariano A</p>
+                        </div>
+                        <div class="cont_datos_busqueda">
+                            <p>Mariano Luis Alonso</p>
+                            <p>Adiestrador de perros</p>
+                            <p>38 años</p>
+                        </div>
+                    </div>
+               </div>
+               <div class="cont_grupo_targetas">
+                <div class="targeta_contacto">
+                    <div class="div_present_contact">
+                        <div class="foto_perfil foto_foto_perfil_17 foto_perfil_busqueda"></div>
+                        <p>Marcos Acosta</p>
+                    </div>
+                    <div class="cont_datos_busqueda">
+                        <p>Marcos Acosta</p>
+                        <p>Buenos Aires</p>
+                        <p>Adiestrador de gatos</p>
+                    </div>
+                </div>
+                <div class="targeta_contacto">
+                    <div class="div_present_contact">
+                        <div class="foto_perfil foto_foto_perfil_16 foto_perfil_busqueda"></div>
+                        <p>Mauri Durán</p>
+                    </div>
+                    <div class="cont_datos_busqueda">
+                        <p>Juan Mauricio Durán</p>
+                        <p>Buenos Aires</p>
+                    </div>
+                </div>
+                <div class="targeta_contacto">
+                    <div class="div_present_contact">
+                        <div class="foto_perfil foto_foto_perfil_15 foto_perfil_busqueda"></div>
+                        <p>Marce Fuente</p>
+                    </div>
+                    <div class="cont_datos_busqueda">
+                        <p>Marcela Fuentes</p>
+                        <p>Adiestradora</p>
+                    </div>
+                </div>
+                </div>
+                <div class="cont_grupo_targetas">
+                    <div class="targeta_contacto">
+                        <div class="div_present_contact">
+                            <div class="foto_perfil foto_foto_perfil_14 foto_perfil_busqueda"></div>
+                            <p>Lucia García</p>
+                        </div>
+                        <div class="cont_datos_busqueda">
+                            <p>Buenos Aires</p>
+                            <p>Adiestradora</p>
+                            <p>38 años</p>
+                        </div>
+                    </div>
+                    <div class="targeta_contacto">
+                        <div class="div_present_contact">
+                            <div class="foto_perfil foto_foto_perfil_13 foto_perfil_busqueda"></div>
+                            <p>Carlos Hernández</p>
+                        </div>
+                        <div class="cont_datos_busqueda">
+                            <p>Buenos Aires</p>
+                            <p>Adiestrador de perros</p>
+                        </div>
+                    </div>
+                    <div class="targeta_contacto">
+                        <div class="div_present_contact">
+                            <div class="foto_perfil foto_foto_perfil_12 foto_perfil_busqueda"></div>
+                            <p>Pepe</p>
+                        </div>
+                        <div class="cont_datos_busqueda">
+                            <p>Adiestrador</p>
+                            <p>38 años</p>
+                        </div>
+                    </div>
+               </div>
+               <div class="cont_grupo_targetas">
+                <div class="targeta_contacto">
+                    <div class="div_present_contact">
+                        <div class="foto_perfil foto_foto_perfil_10 foto_perfil_busqueda"></div>
+                        <p>Bruno Llorente</p>
+                    </div>
+                    <div class="cont_datos_busqueda">
+                        <p>Adiestrador</p>
+                    </div>
+                </div>
+                <div class="targeta_contacto">
+                    <div class="div_present_contact">
+                        <div class="foto_perfil foto_foto_perfil_9 foto_perfil_busqueda"></div>
+                        <p>Sofia Meneses</p>
+                    </div>
+                    <div class="cont_datos_busqueda">
+                        <p>38 años</p>
+                    </div>
+                </div>
+                <div class="targeta_contacto">
+                    <div class="div_present_contact">
+                        <div class="foto_perfil foto_foto_perfil_8 foto_perfil_busqueda"></div>
+                        <p>Franco Bravo</p>
+                    </div>
+                    <div class="cont_datos_busqueda">
+                        <p>38 años</p>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="cont_usuarios_resultdo_busqueda scroll hiden" id="resutado_Publicaciones">
+                <div class="cont_publicacion">
+                    <div class="publicacion">
+                        <div class="descrip_publicacion">
+                            <div class="foto_perfil foto_foto_perfil_15"></div>
+                            <div class="div_p_descripcion">
+                                <p class="p_nombre_usuario_public">Laura Laguillo</p>
+                                <div class="hiden" id="descripcion_1">
+                                    <p>Hoy nos dirigimos al refugio Vida Animal, donde encontramos a nuestro nuevo amigo. 
+                                    La alegría es inmensa y ya no podemos esperar a comenzar el adiestramiento de este 
+                                    nuevo compañero de trabajo.</p>
+                                    <p> Como ya saben nos dedicamos a adiestrar y capacitar animales para el acompañamiento de personas y el control de otros iguales a ellos.</p>
+                                <p> El es Lorenzo nuestro nuevo compañero de aventuras.</p>
+                                </div>
+                                <div id="descripcion_1">
+                                    <p>Hoy nos dirigimos al refugio Vida Animal, donde encontramos a nuestro nuevo amigo. La...</p>
+                                </div>
+                            </div>
+                            <i class="fa fa-angle-down flecha" for="descripcion_1" ></i>
+                            <div class="sub_menu ">
+                                <i class="fas fa-ellipsis-v " id="btn_sub_menu"></i>
+                                <div class="sub_menu_opciones hiden" id="sub_menu_opciones">
+                                    <p>Guardar</p>
+                                    <p>Ocultar</p>
+                                    <p>Denunciar</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contenido_img">
+                        <img class="img_simple" src="https://fotografias-compromiso.atresmedia.com/clipping/cmsimages02/2016/03/29/BF95DB87-345D-473E-B71C-78DE2430E32B/58.jpg" alt="">
+                    </div>
+                    <div class="reacciones">
+                        <div class="div_reacciones">
+                           <i class="far fa-thumbs-up reac_suelta" id="reaccion" for="cant_pulgar_arriba_1"></i>
+                           <p id="cant_pulgar_arriba_1">12</p>
+                        </div>
+                        <div class="div_reacciones">
+                            <i class="far fa-grin-hearts reac_suelta" id="reaccion" for="cant_heard_1"></i>
+                            <p id="cant_heard_1">45</p>
+                        </div>
+                        <div class="div_reacciones">
+                            <i class="far fa-sad-tear reac_suelta" id="reaccion" for="cant_tear_1"></i>
+                            <p id="cant_tear_1"></p>
+                        </div>
+                        <div class="div_reacciones">
+                            <i class="far fa-angry reac_suelta" id="reaccion" for="cant_angry_1"></i>
+                            <p id="cant_angry_1"></p>
+                        </div>
+                        <div class="div_comentarios" id="div_btn_coment" for="coment_1">
+                            <a href="#">5 Comentarios</a>
+                        </div>
+                        <div class="div_compartir">
+                            <i class="fa fa-share-alt reac_suelta"></i>
+                            <p>Compartir</p>
+                        </div>
+                    </div>
+                    <div class="comentarios hiden" id="this_coment_1">
+                        <div class="titulo_comentarios">
+                            <p>Comentarios</p>
+                        </div>
+                        <div class="linea_comentarios"></div>
+                        <div>
+                            <div class="cont_agregar_coment " >
+                                <div class="foto_perfil"></div>
+                                <input class="input_comentar" type="text" placeholder="Escribe un comentario">
+                                <i class="fas fa-smile"></i>
+                                <button class="btn_ver btn_comentar">Comentar</button>
+                            </div>
+                        </div>
+                        <div class="grupo_comentarios scroll scroll_comentarios">
+                            <div class="comentario_usuario">
+                                <div class="div_cont_comentario">
+                                    <div class="foto_perfil foto_foto_perfil_14"></div>
+                                    <div class="cont_comentario_texto">
+                                        <p>Caren Araico</p>
+                                        <p class="p_fecha_comentario">12 de noviembre 2021</p>
+                                        <p class="p_comentario">Me encanta su trabajo y compromiso. Mucha suerte con este nuevo miembro de su hermoso equipo.
+                                            Un afortunado más de poder formanr parte su familia.<p>
+                                    </div>
+                                </div>
+                                <div class="cont_coment_inferior">
+                                    <div class="div_reacciones">
+                                        <i class="far fa-thumbs-up reac_suelta" id="reaccion" for="cant_pulgar_arriba_1"></i>
+                                        <p id="cant_pulgar_arriba_1">5</p>
+                                     </div>
+                                     <div class="div_reacciones">
+                                         <i class="far fa-grin-hearts reac_suelta"></i>
+                                         <p id="cant_heard_1"></p>
+                                     </div>
+                                     <div class="div_reacciones">
+                                         <i class="far fa-sad-tear reac_suelta"></i>
+                                         <p id="cant_tear_1">2</p>
+                                     </div>
+                                     <div class="div_reacciones">
+                                         <i class="far fa-angry reac_suelta"></i>
+                                         <p id="cant_angry_1"></p>
+                                     </div>
+                                     <div class="div_comentarios" id="comentarios">
+                                         <p>2 Comentarios</p>
+                                     </div>
+                                     <div class="div_compartir">
+                                         <i class="fa fa-share-alt reac_suelta"></i>
+                                         <p>Compartir</p>
+                                     </div>
+                                </div>
+                            </div>
+                            <div class="comentario_usuario sub_comentario_usuario">
+                                <div class="div_cont_comentario">
+                                    <div class="foto_perfil foto_foto_perfil_15"></div>
+                                    <div class="cont_comentario_texto">
+                                        <p>Vero Montes</p>
+                                        <p class="p_fecha_comentario">12 de noviembre 2021</p>
+                                        <p class="p_comentario sub_p_comentario">Siempre se agradece este tipo de acciones! los quiero mucho! les mando un abrazo.<p>
+                                    </div>
+                                </div>
+                                <div class="cont_coment_inferior sub_cont_coment_inferior">
+                                    <div class="div_reacciones">
+                                        <i class="far fa-thumbs-up reac_suelta" id="reaccion" for="cant_pulgar_arriba_1"></i>
+                                        <p id="cant_pulgar_arriba_1">5</p>
+                                     </div>
+                                     <div class="div_reacciones">
+                                         <i class="far fa-grin-hearts reac_suelta"></i>
+                                         <p id="cant_heard_1">2</p>
+                                     </div>
+                                     <div class="div_reacciones">
+                                         <i class="far fa-sad-tear reac_suelta"></i>
+                                         <p id="cant_tear_1"></p>
+                                     </div>
+                                     <div class="div_reacciones">
+                                         <i class="far fa-angry reac_suelta"></i>
+                                         <p id="cant_angry_1"></p>
+                                     </div>
+                                     <div class="div_comentarios">
+                                        <p>0 Comentarios</p>
+                                     </div>
+                                     <div class="div_compartir">
+                                         <i class="fa fa-share-alt reac_suelta"></i>
+                                         <p>Compartir</p>
+                                     </div>
+                                </div>
+                            </div>
+                            <div class="comentario_usuario sub_comentario_usuario">
+                                <div class="div_cont_comentario">
+                                    <div class="foto_perfil foto_foto_perfil_16"></div>
+                                    <div class="cont_comentario_texto">
+                                        <p>Mauro Guitart</p>
+                                        <p class="p_fecha_comentario">12 de noviembre 2021</p>
+                                        <p class="p_comentario sub_p_comentario">El comienzo de un largo camino, pero muy gratificante! saludos.<p>
+                                    </div>
+                                </div>
+                                <div class="cont_coment_inferior sub_cont_coment_inferior">
+                                    <div class="div_reacciones">
+                                        <i class="far fa-thumbs-up reac_suelta" id="reaccion" for="cant_pulgar_arriba_1"></i>
+                                        <p id="cant_pulgar_arriba_1">5</p>
+                                     </div>
+                                     <div class="div_reacciones">
+                                         <i class="far fa-grin-hearts reac_suelta"></i>
+                                         <p id="cant_heard_1">24</p>
+                                     </div>
+                                     <div class="div_reacciones">
+                                         <i class="far fa-sad-tear reac_suelta"></i>
+                                         <p id="cant_tear_1"></p>
+                                     </div>
+                                     <div class="div_reacciones">
+                                         <i class="far fa-angry reac_suelta"></i>
+                                         <p id="cant_angry_1"></p>
+                                     </div>
+                                     <div class="div_comentarios">
+                                        <p>0 Comentarios</p>
+                                     </div>
+                                     <div class="div_compartir">
+                                         <i class="fa fa-share-alt reac_suelta"></i>
+                                         <p>Compartir</p>
+                                     </div>
+                                </div>
+                            </div>
+                            <div class="comentario_usuario">
+                                <div class="div_cont_comentario">
+                                    <div class="foto_perfil foto_foto_perfil_18"></div>
+                                    <div class="cont_comentario_texto">
+                                        <p>Fran Guzmán</p>
+                                        <p class="p_fecha_comentario">12 de noviembre 2021</p>
+                                        <p class="p_comentario">Los aplaudo!!!<p>
+                                    </div>
+                                </div>
+                                <div class="cont_coment_inferior">
+                                    <div class="div_reacciones">
+                                        <i class="far fa-thumbs-up reac_suelta" id="reaccion" for="cant_pulgar_arriba_1"></i>
+                                        <p id="cant_pulgar_arriba_1">5</p>
+                                     </div>
+                                     <div class="div_reacciones">
+                                         <i class="far fa-grin-hearts reac_suelta"></i>
+                                         <p id="cant_heard_1">5</p>
+                                     </div>
+                                     <div class="div_reacciones">
+                                         <i class="far fa-sad-tear reac_suelta"></i>
+                                         <p id="cant_tear_1">5</p>
+                                     </div>
+                                     <div class="div_reacciones">
+                                         <i class="far fa-angry reac_suelta"></i>
+                                         <p id="cant_angry_1">5</p>
+                                     </div>
+                                     <div class="div_comentarios" >
+                                        <p>0 Comentarios</p>
+                                     </div>
+                                     <div class="div_compartir">
+                                         <i class="fa fa-share-alt reac_suelta"></i>
+                                         <p>Compartir</p>
+                                     </div>
+                                </div>
+                            </div>
+                            <div class="comentario_usuario">
+                                <div class="div_cont_comentario">
+                                    <div class="foto_perfil foto_foto_perfil_17"></div>
+                                    <div class="cont_comentario_texto">
+                                        <p>Gonzalo Parra</p>
+                                        <p class="p_fecha_comentario">12 de noviembre 2021</p>
+                                        <p class="p_comentario">Adopta no compres! Me hace muy feliz cada vez que veo este tio de acciones!<p>
+                                    </div>
+                                </div>
+                                <div class="cont_coment_inferior">
+                                    <div class="div_reacciones">
+                                        <i class="far fa-thumbs-up reac_suelta" id="reaccion" for="cant_pulgar_arriba_1"></i>
+                                        <p id="cant_pulgar_arriba_1">2</p>
+                                     </div>
+                                     <div class="div_reacciones">
+                                         <i class="far fa-grin-hearts reac_suelta"></i>
+                                         <p id="cant_heard_1"></p>
+                                     </div>
+                                     <div class="div_reacciones">
+                                         <i class="far fa-sad-tear reac_suelta"></i>
+                                         <p id="cant_tear_1"></p>
+                                     </div>
+                                     <div class="div_reacciones">
+                                         <i class="far fa-angry reac_suelta"></i>
+                                         <p id="cant_angry_1">1</p>
+                                     </div>
+                                     <div class="div_comentarios" >
+                                         <p>0 Comentarios</p>
+                                     </div>
+                                     <div class="div_compartir">
+                                         <i class="fa fa-share-alt reac_suelta"></i>
+                                         <p>Compartir</p>
+                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cont_publicacion">
+                    <div class="publicacion">
+                        <div class="descrip_publicacion">
+                            <div class="foto_perfil foto_foto_perfil_12"></div>
+                            <div class="div_p_descripcion">
+                                <p class="p_nombre_usuario_public">Nico Estrada</p>
+                                <div  id="descripcion_2">
+                                    <p>Algunas de fotos tomadas durante el finde semana.</p>
+                                </div>
+                            </div>
+                            <div class="sub_menu ">
+                                <i class="fas fa-ellipsis-v " id="btn_sub_menu"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contenido_img">
+                        <img class="img_simple" src="https://media.traveler.es/photos/6137683bccdecaa3de670c19/master/w_1600,c_limit/152672.jpg" alt="">
+                    </div>
+                    <div class="reacciones">
+                        <div class="div_reacciones">
+                           <i class="far fa-thumbs-up reac_suelta" id="reaccion" for="cant_pulgar_arriba_2"></i>
+                           <p id="cant_pulgar_arriba_2">45</p>
+                        </div>
+                        <div class="div_reacciones">
+                            <i class="far fa-grin-hearts reac_suelta" id="reaccion" for="cant_heard_2"></i>
+                            <p id="cant_heard_2">123</p>
+                        </div>
+                        <div class="div_reacciones">
+                            <i class="far fa-sad-tear reac_suelta" id="reaccion" for="cant_tear_2"></i>
+                            <p id="cant_tear_2"></p>
+                        </div>
+                        <div class="div_reacciones">
+                            <i class="far fa-angry reac_suelta" id="reaccion" for="cant_angry_2"></i>
+                            <p id="cant_angry_2"></p>
+                        </div>
+                        <div class="div_comentarios" id="div_btn_coment" for="coment_2">
+                            <a href="#">12 Comentarios</a>
+                        </div>
+                        <div class="div_compartir">
+                            <i class="fa fa-share-alt reac_suelta"></i>
+                            <p>Compartir</p>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+        </section>
+    </section>
+</body>
+</html>

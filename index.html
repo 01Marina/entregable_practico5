@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styleGeneral.css">
+    <link rel="stylesheet" href="css/styleHeader.css">
+    <link rel="stylesheet" href="css/styleIndex.css">
+    <link rel="stylesheet" href="css/styleRegistro.css">
+    <script src="js/login.js" defer></script>
+    <script src="https://kit.fontawesome.com/dae53e07cf.js" crossorigin="anonymous" defer></script>
+    <title>RedVet</title>
+</head>
+<body>
+    <section class="presentacion">
+        <!---PRIMER PANTALLA-->
+        <div class="slide tamano_slide animarTexto" id="slide">
+            <div>
+                <p class="p_slide">Desde RedVet te damos la</p>
+                <p class="p_slide">BIENVENIDA.</p>
+            </div>
+        </div>
+        <!---SEGNDA PANTALLA-->
+        <div class="slide animarTexto delaySlide1" id="slide">
+            <p class="p_slide">Acercandote a quienes comparten</p>
+            <p class="p_slide">TUS MISMOS INTERESE.</p>
+        </div>
+        <!---Tercera PANTALLA-->
+        <div class="slide animarTexto delaySlide2" id="slide">
+            <p class="p_slide">Mascotas, salud animal,</p>
+            <p class="p_slide">proteccionismo, servicios para animales</p>
+            <p class="p_slide">y mucho más.</p>
+        </div>
+        <!---Cuarta PANTALLA-->
+        <div class="slide animarTexto delaySlide3" id="slide">
+            <p class="p_slide">Iniciá tu sesión.</p>
+            <p class="p_slide">Si eres nuevo no dudes en</p>
+            <p class="p_slide">REGISTRARTE</p>
+        </div>
+        <!---Quinta PANTALLA-->
+        <div class="slide animarTexto delaySlide4" id="slide">
+            <p class="p_slide">y comienzá a formar parte de esta comunidad.</p>
+            <p class="p_slide">TU COMUNIDAD</p>
+        </div>
+        <div class="div_perro"></div>
+        <!--<div class="div_perro ">
+            <div class="perro" id="perro"></div>
+        </div>-->
+        <div class="div_confeti tamano_completo ">
+            <div class="confeti tamano_completo"></div>
+        </div>
+        <div class="div_puntos tamano_completo ">
+            <div class="puntos tamano_completo"></div>
+        </div>
+        <div class="div_globos1 tamano_completo ">
+            <div class="globos1 tamano_completo"></div>
+        </div>
+        <div class="div_globos2 tamano_completo ">
+            <div class="globos2 tamano_completo"></div>
+        </div>
+
+    </section>
+
+    <header>
+        <img class="logo" id="logo" src="img/logo.png" alt="logo RedVet">
+    </header>
+    <section class="contenedor_general">
+        <form class="form_ingresar" action="" id="form_ingresar">
+            <legend>Iniciar sesión</legend>
+            <section class="cuerpo_form">
+                <div>
+                    <label class="form_ingresar_label" for="usuario">Usuario</label>
+                    <input class="form_input_ingresar" type="text" id="usuario" placeholder="Escribe tu usuario o email">
+                    <p class="p_error hiden" id="error_usuario"><i class="fa fa-exclamation-triangle"></i>Usuario incorrecto</p> 
+                </div>
+                <div>
+                    <label class="form_ingresar_label"  for="contrasena">Contraseña</label>
+                    <input class="form_input_ingresar" type="password" id="contrasena" placeholder="Escribe tu contraseña">
+                    <p class="p_error hiden" id="error_contraseña"><i class="fa fa-exclamation-triangle"></i> Contraseña incorrecta</p>
+                </div>
+                <a class="olvidaste_contraseña" href="#">¿Olvidaste tu contraseña?</a>
+                <a class="btn_ingresar" href="home.html">Ingresar</a>
+                <a class="btn_registrarse" href="#" id="link_registrarse">Registrarse</a>
+            </section>
+        </form>
+        <form class="form_ingresar form_registrarse hiden" action="" id="form_registrar">
+            <legend>Crea tu cuenta</legend>
+            <section class="cuerpo_form">
+                <label class="form_registrarse_label" for="nombre">Nombre</label>
+                <input class="form_input_ingresar" type="text" id="nombre" placeholder="Escribe tus nombres">
+
+                <label class="form_registrarse_label" for="apellido">Apellido</label>
+                <input class="form_input_ingresar" type="text" id="apellido" placeholder="Escribe tus apellidos">
+
+                <label class="form_registrarse_label" for="email">Email</label>
+                <input class="form_input_ingresar" type="text" id="email" placeholder="Escribe tu email">
+
+                <label class="form_registrarse_label" for="nacimiento">Fecha de nacimiento</label>
+                <input class="form_input_ingresar" type="date" id="nacimiento" placeholder="dd/mm/aa">
+                <div class="div_conten_input_contra">
+                    <label class="form_registrarse_label" for="contraseña">Contraseña</label>
+                    <input class="form_input_ingresar" type="password" id="contraseña_registrar" placeholder="Escribe una contraseña">
+                    <div class="div_cont_error hiden_c" id="div_p_error_contra">
+                        <i class="fa fa-exclamation-triangle"></i>
+                        <p class=" p_contraseña  " id="p_contrasena">La contraseña debe tener letras y números</p>
+                    </div>
+
+                </div>
+                <div class="div_conten_input_contra div_2">
+                    <label class="form_registrarse_label" for="contraseña">Repite la contraseña</label>
+                    <input class="form_input_ingresar" type="password" id="input_contrasena_repite" placeholder="Escribe nuevamente la contraseña">
+                    <div class="div_cont_error tamano_error_caracters hiden_c" id="div_p_error_contra_repite">
+                        <i class="fa fa-exclamation-triangle"></i>
+                        <p class=" p_contraseña  " >Las contraseña no coinciden.</p>
+                    </div>
+
+                </div>
+
+
+                <a class="btn_registrarse btn_crear" href="home.html">Crear</a>
+            </section>
+        </form>
+    </section>
+    
+</body>
+</html>

@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styleGeneral.css">
+    <link rel="stylesheet" href="css/styleHeader.css">
+    <link rel="stylesheet" href="css/styleUsuario.css">
+    <link rel="stylesheet" href="css/stylePublicaciones.css">
+    <link rel="stylesheet" href="css/styleFotosPerfiles.css">
+    <script src="js/CambioPantallas.js" defer></script>
+    <script src="js/publicaciones.js" defer></script>
+    <script src="https://kit.fontawesome.com/dae53e07cf.js" crossorigin="anonymous"></script>
+    <title>RedVet usuario</title>
+</head>
+<body>
+    <header>
+        <a href="home.html"><img class="logo" src="img/logo.png" alt="logo RedVet"></a>
+        <nav>
+            <div>
+                <a href="home.html"><i class="fa fa-home"></i></a>
+                <a class="pantalla_activa" href="usuario.html"><i class="fa fa-user"></i></a>
+                <a href="mensajes.html"><i class="fa fa-comment-dots"></i></a>
+            </div>
+            <a class="search" href="buscar.html"><i class="fa fa-search " ></i></a>
+        </nav>
+    </header>
+    <section class="contenedor_general scroll">
+        <div class="cont_editar_perfil">
+            <div class="fondo_editar_perfil hiden" id="fondo_editar_perfil"></div>
+            <!----
+            <div class="div_editar_perfil hiden" id="div_editar">
+                <i class="fas fa-times" id="btn_cerrar_editar"></i>
+                <div class="div_dato_foto_usurio">
+                    <div class="foto_perfil"><i class="fas fa-edit"></i></div>
+                    <div>
+                        <p>Mariel García</p>
+                        <i class="fas fa-edit"></i>
+                    </div>
+                </div>
+                <div>
+                    <div class="div_dato">
+                        <p>Nombres</p>
+                        <p>Mariel Soledad</p>
+                        <i class="fas fa-edit"></i>
+                    </div>
+                    <div class="div_dato">
+                        <p>Apellidos</p>
+                        <p>García</p>
+                        <i class="fas fa-edit"></i>
+                    </div>
+                    <div class="div_dato">
+                        <p>Email</p>
+                        <p>marielGarcia@gamil.com</p>
+                        <i class="fas fa-edit"></i>
+                    </div>
+                    <div class="div_dato">
+                        <p>Edad</p>
+                        <p>38 años</p>
+                        <i class="fas fa-edit"></i>
+                    </div>
+                    <div class="div_dato">
+                        <p>Ocupación</p>
+                        <p>Veterinaria</p>
+                        <i class="fas fa-edit"></i>
+                    </div>
+                    <div class="div_dato">
+                        <p>Localidad</p>
+                        <p>Buenos Aires</p>
+                        <i class="fas fa-edit"></i>
+                    </div>
+                </div>
+            </div>-->
+            <div class="div_editar_perfil div_configuracion hiden" id="div_configuraciones">
+                <i class="fas fa-times" id="btn_cerrar_config"></i>
+                <div class="div_dato_foto_usurio dato_foto_usuario_config">
+                    <div class="foto_perfil"></div>
+                    <div>
+                        <p>Mariel García</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="div_dato">
+                        <p>Configuración</p>
+                        <i class="fa fa-angle-right"></i>
+                    </div>
+                    <div class="div_dato">
+                        <p>Privacidad</p>
+                        <i class="fa fa-angle-right"></i>
+                    </div>
+                    <button id="btn_salir">
+                        <i class="fa fa-sign-out" aria-hidden="true"></i>
+                        <p>salir</p>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="header_usuario">
+            <div class="foto_portada">
+                <div class="foto_perfil foto_usuario"></div>
+            </div>
+            <p>Mariel García</p>
+            <div class="perfil_usuario_detalles">
+                <div>
+                    <p>15098 seguidos</p>
+                    <p>15098 seguidores</p>
+
+                </div>
+                <div>
+                    <button >Editar perfil</button>
+                    <button id="btn_configuracion">configuración</button>
+                </div>
+            </div>
+        </div>
+        <div class="cont_user">
+            <div class="div_contactos">
+                <div class="titulo_contactos">
+                    <p>Seguidos</p>
+                    <i class="fa fa-users" aria-hidden="true"></i>
+                </div>
+                <button class="btn_ver btn_ver_mas">Ver más</button>
+                <div>
+                    <input class="input_buscar_contacto" type="text" placeholder="Buscar seguido">
+                    <i class="fa fa-search icono_search_contacto" aria-hidden="true"></i>
+                </div>
+                <div class="div_cont_contac_scroll scroll">
+                    <div class="usuario_contacto">
+                        <div class="foto_perfil foto_perfil_max foto_foto_perfil_20"><div class="contacto_activo"></div></div>
+                        <p class="p_recomendado">Rosalinda Castro</p>
+                    </div>
+                    <div class="usuario_contacto">
+                        <div class="foto_perfil foto_perfil_max foto_foto_perfil_19"><div class="contacto_activo"></div></div>
+                        <p class="p_recomendado">Antonio Guardiola</p>
+                    </div>
+                    <div class="usuario_contacto">
+                        <div class="foto_perfil foto_perfil_max foto_foto_perfil_18"><div class="contacto_activo"></div></div>
+                        <p class="p_recomendado">Carlos Castro Gual</p>
+                    </div>
+                    <div class="usuario_contacto">
+                        <div class="foto_perfil foto_perfil_max foto_foto_perfil_17"><div class="contacto_activo"></div></div>
+                        <p class="p_recomendado">Lorena Ilarraza</p>
+                    </div>
+                    <div class="usuario_contacto">
+                        <div class="foto_perfil foto_perfil_max foto_foto_perfil_16"><div class="contacto_activo"></div></div>
+                        <p class="p_recomendado">Manuel Lazcano</p>
+                    </div>
+                    <div class="usuario_contacto">
+                        <div class="foto_perfil foto_perfil_max foto_foto_perfil_15"></div>
+                        <p class="p_recomendado">Vanesa Ponce</p>
+                    </div>
+                    <div class="usuario_contacto">
+                        <div class="foto_perfil foto_perfil_max foto_foto_perfil_14"></div>
+                        <p class="p_recomendado">Joaquín López</p>
+                    </div>
+                    <div class="usuario_contacto">
+                        <div class="foto_perfil foto_perfil_max foto_foto_perfil_13"></div>
+                        <p class="p_recomendado">Rafael Kuri Lemus</p>
+                    </div>
+                    <div class="usuario_contacto">
+                        <div class="foto_perfil foto_foto_perfil_12"></div>
+                        <p class="p_recomendado">Benjamín Rojas</p>
+                    </div>
+                    <div class="usuario_contacto">
+                        <div class="foto_perfil foto_perfil_max foto_foto_perfil_4"></div>
+                        <p class="p_recomendado">Fabio Martínez</p>
+                    </div>
+                    <div class="usuario_contacto">
+                        <div class="foto_perfil foto_perfil_max foto_foto_perfil_10"></div>
+                        <p class="p_recomendado">José Muñoz</p>
+                    </div>
+                    <div class="usuario_contacto">
+                        <div class="foto_perfil foto_perfil_max foto_foto_perfil_9"></div>
+                        <p class="p_recomendado">Carla Orozco</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cont_publicaciones">
+                <div class="cont_agregar_coment">
+                    <div class="foto_perfil"></div>
+                    <input class="input_comentar input_publicacion" type="text" placeholder="Escribe tu publicación">
+                    <i class="fas fa-smile"></i>
+                    <i class="fas fa-ellipsis-v icono_adjuntar" id="btn_adjuntar"></i>
+                    <button class="btn_ver btn_comentar">Publicar</button>
+                </div>
+                <div class="div_adjuntar_en_publicacion hiden_2" id="cont_adjunto">
+                    <div>
+                        <i class="fas fa-video "></i>
+                        <p>Video</p>
+                    </div>
+                    <div>
+                        <i class="fas fa-images    "></i>
+                        <p>Imágenes</p>
+                    </div>
+                    <div>
+                        <i class="fas fa-file-upload "></i>
+                        <p>Documento</p>
+                    </div>
+                </div>
+                <section class="div_publicaciones scroll">
+                    <!----PUBLICACIÓN-->
+                    <div class="cont_publicacion">
+                        <div class="publicacion">
+                            <div class="descrip_publicacion">
+                                <div class="foto_perfil"></div>
+                                <div class="div_p_descripcion">
+                                    <p class="p_nombre_usuario_public">Mariel García</p>
+                                    <div class="hiden" id="descripcion_1">
+                                        <p> Te conmoverá la impresionante recuperación de este husky 🐶  · La sensacional transformación de este Husky que volvió a vivir gracias al poder del amor.❤ El esfuerzo de esta joven, por su gran corazón, le brindó una nueva oportunidad de vida al indefenso animal. 🐾🐾</p>
+                                    </div>
+                                    <div id="descripcion_1">
+                                        <p> Te conmoverá la impresionante recuperación de este husky 🐶  · La sensacional transformación de este Husky...</p>
+                                    </div>
+                                </div>
+                                <i class="fa fa-angle-down flecha" for="descripcion_1" ></i>
+                                <div class="sub_menu " id="btn_sub_menu">
+                                    <i class="fas fa-ellipsis-v " ></i>
+                                    <div class="sub_menu_opciones hiden" id="sub_menu_opciones">
+                                        <p>Modificar</p>
+                                        <p>Ocultar</p>
+                                        <p>Eliminar</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contenido_img">
+                            <img class="img_simple" src="https://1.bp.blogspot.com/-H8raF2fmQ9s/Xz3tYy7d6oI/AAAAAAAANng/3xtEjyzrjsw6GQ-Z4vnidRSvmgA4aW20ACLcBGAsYHQ/s1600/Finn-con-sus-due%25C3%25B1os.jpg" alt="">
+                        </div>
+                        <div class="reacciones">
+                            <div class="div_reacciones">
+                               <i class="far fa-thumbs-up reac_suelta" id="reaccion" for="cant_pulgar_arriba_1"></i>
+                               <p id="cant_pulgar_arriba_1"></p>
+                            </div>
+                            <div class="div_reacciones">
+                                <i class="far fa-grin-hearts reac_suelta" id="reaccion" for="cant_heard_1"></i>
+                                <p id="cant_heard_1"></p>
+                            </div>
+                            <div class="div_reacciones">
+                                <i class="far fa-sad-tear reac_suelta" id="reaccion" for="cant_tear_1"></i>
+                                <p id="cant_tear_1"></p>
+                            </div>
+                            <div class="div_reacciones">
+                                <i class="far fa-angry reac_suelta" id="reaccion" for="cant_angry_1"></i>
+                                <p id="cant_angry_1"></p>
+                            </div>
+                            <div class="div_comentarios" id="div_btn_coment" for="coment_1">
+                                <a href="#">5 Comentarios</a>
+                            </div>
+                            <div class="div_compartir">
+                                <i class="fa fa-share-alt reac_suelta"></i>
+                                <p>Compartir</p>
+                            </div>
+                        </div>
+                        <div class="comentarios hiden" id="this_coment_1">
+                            <div class="titulo_comentarios">
+                                <p>Comentarios</p>
+                            </div>
+                            <div class="linea_comentarios"></div>
+                            <div>
+                                <div class="cont_agregar_coment " >
+                                    <div class="foto_perfil"></div>
+                                    <input class="input_comentar" type="text" placeholder="Escribe un comentario">
+                                    <i class="fas fa-smile"></i>
+                                    <button class="btn_ver btn_comentar">Comentar</button>
+                                </div>
+                            </div>
+                            <div class="grupo_comentarios scroll scroll_comentarios">
+                                <div class="comentario_usuario">
+                                    <div class="div_cont_comentario">
+                                        <div class="foto_perfil foto_foto_perfil_14"></div>
+                                        <div class="cont_comentario_texto">
+                                            <p>Caren Araico</p>
+                                            <p class="p_fecha_comentario">12 de noviembre 2021</p>
+                                            <p class="p_comentario">Me encanta su trabajo y compromiso. Mucha suerte con este nuevo miembro de su hermoso equipo.
+                                                Un afortunado más de poder formanr parte su familia.<p>
+                                        </div>
+                                    </div>
+                                    <div class="cont_coment_inferior">
+                                        <div class="div_reacciones">
+                                            <i class="far fa-thumbs-up reac_suelta" id="reaccion" for="cant_pulgar_arriba_1"></i>
+                                            <p id="cant_pulgar_arriba_1">5</p>
+                                         </div>
+                                         <div class="div_reacciones">
+                                             <i class="far fa-grin-hearts reac_suelta"></i>
+                                             <p id="cant_heard_1"></p>
+                                         </div>
+                                         <div class="div_reacciones">
+                                             <i class="far fa-sad-tear reac_suelta"></i>
+                                             <p id="cant_tear_1">2</p>
+                                         </div>
+                                         <div class="div_reacciones">
+                                             <i class="far fa-angry reac_suelta"></i>
+                                             <p id="cant_angry_1"></p>
+                                         </div>
+                                         <div class="div_comentarios" id="comentarios">
+                                             <p>2 Comentarios</p>
+                                         </div>
+                                         <div class="div_compartir">
+                                             <i class="fa fa-share-alt reac_suelta"></i>
+                                             <p>Compartir</p>
+                                         </div>
+                                    </div>
+                                </div>
+                                <div class="comentario_usuario sub_comentario_usuario">
+                                    <div class="div_cont_comentario">
+                                        <div class="foto_perfil foto_foto_perfil_15"></div>
+                                        <div class="cont_comentario_texto">
+                                            <p>Vero Montes</p>
+                                            <p class="p_fecha_comentario">12 de noviembre 2021</p>
+                                            <p class="p_comentario sub_p_comentario">Siempre se agradece este tipo de acciones! los quiero mucho! les mando un abrazo.<p>
+                                        </div>
+                                    </div>
+                                    <div class="cont_coment_inferior sub_cont_coment_inferior">
+                                        <div class="div_reacciones">
+                                            <i class="far fa-thumbs-up reac_suelta" id="reaccion" for="cant_pulgar_arriba_1"></i>
+                                            <p id="cant_pulgar_arriba_1">5</p>
+                                         </div>
+                                         <div class="div_reacciones">
+                                             <i class="far fa-grin-hearts reac_suelta"></i>
+                                             <p id="cant_heard_1">2</p>
+                                         </div>
+                                         <div class="div_reacciones">
+                                             <i class="far fa-sad-tear reac_suelta"></i>
+                                             <p id="cant_tear_1"></p>
+                                         </div>
+                                         <div class="div_reacciones">
+                                             <i class="far fa-angry reac_suelta"></i>
+                                             <p id="cant_angry_1"></p>
+                                         </div>
+                                         <div class="div_comentarios">
+                                            <p>0 Comentarios</p>
+                                         </div>
+                                         <div class="div_compartir">
+                                             <i class="fa fa-share-alt reac_suelta"></i>
+                                             <p>Compartir</p>
+                                         </div>
+                                    </div>
+                                </div>
+                                <div class="comentario_usuario sub_comentario_usuario">
+                                    <div class="div_cont_comentario">
+                                        <div class="foto_perfil foto_foto_perfil_16"></div>
+                                        <div class="cont_comentario_texto">
+                                            <p>Mauro Guitart</p>
+                                            <p class="p_fecha_comentario">12 de noviembre 2021</p>
+                                            <p class="p_comentario sub_p_comentario">El comienzo de un largo camino, pero muy gratificante! saludos.<p>
+                                        </div>
+                                    </div>
+                                    <div class="cont_coment_inferior sub_cont_coment_inferior">
+                                        <div class="div_reacciones">
+                                            <i class="far fa-thumbs-up reac_suelta" id="reaccion" for="cant_pulgar_arriba_1"></i>
+                                            <p id="cant_pulgar_arriba_1">5</p>
+                                         </div>
+                                         <div class="div_reacciones">
+                                             <i class="far fa-grin-hearts reac_suelta"></i>
+                                             <p id="cant_heard_1">24</p>
+                                         </div>
+                                         <div class="div_reacciones">
+                                             <i class="far fa-sad-tear reac_suelta"></i>
+                                             <p id="cant_tear_1"></p>
+                                         </div>
+                                         <div class="div_reacciones">
+                                             <i class="far fa-angry reac_suelta"></i>
+                                             <p id="cant_angry_1"></p>
+                                         </div>
+                                         <div class="div_comentarios">
+                                            <p>0 Comentarios</p>
+                                         </div>
+                                         <div class="div_compartir">
+                                             <i class="fa fa-share-alt reac_suelta"></i>
+                                             <p>Compartir</p>
+                                         </div>
+                                    </div>
+                                </div>
+                                <div class="comentario_usuario">
+                                    <div class="div_cont_comentario">
+                                        <div class="foto_perfil foto_foto_perfil_18"></div>
+                                        <div class="cont_comentario_texto">
+                                            <p>Fran Guzmán</p>
+                                            <p class="p_fecha_comentario">12 de noviembre 2021</p>
+                                            <p class="p_comentario">Los aplaudo!!!<p>
+                                        </div>
+                                    </div>
+                                    <div class="cont_coment_inferior">
+                                        <div class="div_reacciones">
+                                            <i class="far fa-thumbs-up reac_suelta" id="reaccion" for="cant_pulgar_arriba_1"></i>
+                                            <p id="cant_pulgar_arriba_1">5</p>
+                                         </div>
+                                         <div class="div_reacciones">
+                                             <i class="far fa-grin-hearts reac_suelta"></i>
+                                             <p id="cant_heard_1">5</p>
+                                         </div>
+                                         <div class="div_reacciones">
+                                             <i class="far fa-sad-tear reac_suelta"></i>
+                                             <p id="cant_tear_1">5</p>
+                                         </div>
+                                         <div class="div_reacciones">
+                                             <i class="far fa-angry reac_suelta"></i>
+                                             <p id="cant_angry_1">5</p>
+                                         </div>
+                                         <div class="div_comentarios" >
+                                            <p>0 Comentarios</p>
+                                         </div>
+                                         <div class="div_compartir">
+                                             <i class="fa fa-share-alt reac_suelta"></i>
+                                             <p>Compartir</p>
+                                         </div>
+                                    </div>
+                                </div>
+                                <div class="comentario_usuario">
+                                    <div class="div_cont_comentario">
+                                        <div class="foto_perfil foto_foto_perfil_17"></div>
+                                        <div class="cont_comentario_texto">
+                                            <p>Gonzalo Parra</p>
+                                            <p class="p_fecha_comentario">12 de noviembre 2021</p>
+                                            <p class="p_comentario">Adopta no compres! Me hace muy feliz cada vez que veo este tio de acciones!<p>
+                                        </div>
+                                    </div>
+                                    <div class="cont_coment_inferior">
+                                        <div class="div_reacciones">
+                                            <i class="far fa-thumbs-up reac_suelta" id="reaccion" for="cant_pulgar_arriba_1"></i>
+                                            <p id="cant_pulgar_arriba_1">2</p>
+                                         </div>
+                                         <div class="div_reacciones">
+                                             <i class="far fa-grin-hearts reac_suelta"></i>
+                                             <p id="cant_heard_1"></p>
+                                         </div>
+                                         <div class="div_reacciones">
+                                             <i class="far fa-sad-tear reac_suelta"></i>
+                                             <p id="cant_tear_1"></p>
+                                         </div>
+                                         <div class="div_reacciones">
+                                             <i class="far fa-angry reac_suelta"></i>
+                                             <p id="cant_angry_1">1</p>
+                                         </div>
+                                         <div class="div_comentarios" >
+                                             <p>0 Comentarios</p>
+                                         </div>
+                                         <div class="div_compartir">
+                                             <i class="fa fa-share-alt reac_suelta"></i>
+                                             <p>Compartir</p>
+                                         </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cont_publicacion">
+                        <div class="publicacion">
+                            <div class="descrip_publicacion">
+                                <div class="foto_perfil"></div>
+                                <div class="div_p_descripcion">
+                                    <p class="p_nombre_usuario_public">Mariel García</p>
+                                    <div id="descripcion_1">
+                                        <p>Seamos buenos también con los animales ¿Cuál es su opinión sobre esta frase? Conoce más en:https://bit.ly/3kzrZGR</p>
+                                    </div>
+                                </div>
+                                <div class="sub_menu ">
+                                    <i class="fas fa-ellipsis-v " id="btn_sub_menu"></i>
+                                    <div class="sub_menu_opciones hiden" id="sub_menu_opciones">
+                                        <p>Modificar</p>
+                                        <p>Ocultar</p>
+                                        <p>Eliminar</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contenido_img">
+                            <img class="img_simple" src="img/imagen_frase.jpg" alt="">
+                        </div>
+                        <div class="reacciones">
+                            <div class="div_reacciones">
+                               <i class="far fa-thumbs-up reac_suelta" id="reaccion" for="cant_pulgar_arriba_1"></i>
+                               <p id="cant_pulgar_arriba_1"></p>
+                            </div>
+                            <div class="div_reacciones">
+                                <i class="far fa-grin-hearts reac_suelta" id="reaccion" for="cant_heard_1"></i>
+                                <p id="cant_heard_1"></p>
+                            </div>
+                            <div class="div_reacciones">
+                                <i class="far fa-sad-tear reac_suelta" id="reaccion" for="cant_tear_1"></i>
+                                <p id="cant_tear_1"></p>
+                            </div>
+                            <div class="div_reacciones">
+                                <i class="far fa-angry reac_suelta" id="reaccion" for="cant_angry_1"></i>
+                                <p id="cant_angry_1"></p>
+                            </div>
+                            <div class="div_comentarios" id="div_btn_coment" for="coment_1">
+                                <a href="#">5 Comentarios</a>
+                            </div>
+                            <div class="div_compartir">
+                                <i class="fa fa-share-alt reac_suelta"></i>
+                                <p>Compartir</p>
+                            </div>
+                        </div>
+                        <div class="comentarios hiden" id="this_coment_1">
+                            <div class="titulo_comentarios">
+                                <p>Comentarios</p>
+                            </div>
+                            <div class="linea_comentarios"></div>
+                            <div>
+                                <div class="cont_agregar_coment " >
+                                    <div class="foto_perfil"></div>
+                                    <input class="input_comentar" type="text" placeholder="Escribe un comentario">
+                                    <i class="fas fa-smile"></i>
+                                    <button class="btn_ver btn_comentar">Comentar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
